@@ -7,12 +7,17 @@
 #define word unsigned int
 
 using namespace std;
+/// \file Enter.cpp
 
+/// Peremennie, kotorie budu ispolzovatsa
 int i, j, n, p, xn, xk;
 int flag[11];
 word c[11][11], l[11];
 char s[80], path[80][11];
  
+
+/// \fn 
+
 int min(int n)
 {
     int i, result;
@@ -23,12 +28,16 @@ int min(int n)
     return result;
 }
  
+
+/// \fn  Poisk minimuma
 word minim(word x, word y)
 {
     if(x<y) return x;
     return y;
 }
  
+
+/// \fn Glavnaya funcia
 void main()
 {
 	setlocale(LC_ALL, "rus");
@@ -57,7 +66,7 @@ void main()
     }
     for(i=0;i<n;i++)
         for(j=0;j<n;j++)
-            if(c[i][j]==0) c[i][j]=65535; //nekonecno
+            if(c[i][j]==0) c[i][j]=65535; /// Nekonecno
     cout<<" задайте начальную точку: ";
     cin>>xn;
     cout<<" задайте конечную точку: ";
